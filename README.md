@@ -16,10 +16,25 @@ This code was tested on an Ubuntu 16.04 system using Mininet, openvswitch-2.14.0
 We have plenty of files in this part, details are explained as following:
 
 Under folder `code`:
+- new_topology.py: The "new_topology" custom starts all of the mininet components and the network. It is a 18-host network with one attack host, one active legitimate host, and 16 passive legitimate hosts only receiving packets, all connected through an Open vSwtich under the control of an OpenFlow-Test Controller.
+- folder `calculate_hit_ratio`: 
+  - calculate_hit_ratio.m: function to calculate the hit ratio of legitimate users under mice/medium/elephant flow attack by the given logs(response time of each packets).
+  - hybrid_calculate_hit_ratio.m: function to calculate the hit ratio of legitimate users under hybrid attack by the given logs(response time of each packets).
+  - hybrid_plot_mininet_data.m: plot (c) of   Figure Experiment results on DoS attack in Mininet with total attack rate1000(unit: packets per 100 ms) (solid: experiment; dashed: simulation) in our [paper](https://nsrg.cse.psu.edu/files/2020/12/Tian21INFOCOM-Attack-Resilience-of-Cache-Policies.pdf).
+  - plot_mininet_data.m: plot (a-b) of   Figure Experiment results on DoS attack in Mininet with total attack rate1000(unit: packets per 100 ms) (solid: experiment; dashed: simulation) in our [paper](https://nsrg.cse.psu.edu/files/2020/12/Tian21INFOCOM-Attack-Resilience-of-Cache-Policies.pdf).
+  
+- folder `monitor`: 
+  - capturePacket.py: capture packets of the designed network into pcap files.
+  - processPacket.py: calculate response time for packets sent by legitimate users.
+- folder `traffic_generation`: to generate the legitimate traffic and attack traffic according to the configuration in our [paper](https://nsrg.cse.psu.edu/files/2020/12/Tian21INFOCOM-Attack-Resilience-of-Cache-Policies.pdf).
 
-Under folder `data_attack_traces`:
+  - craft_packet.h: headfile of crafting packets.
+  - craft_packet_attack.cpp: generate attack trace file or send the packets according to a given attack trace file.
+  - trace_driven_traffic.cpp: generate the legitimate traffic according to the trace txt file in folder `data_legitimate_traces`. (under same timestamp and flow id)
+  
+Under folder `data_attack_traces`: stores attack traces saved with the pattern `attack_trace_n`, where n denotes the flow rate of the trace. Each file data contains two columns: time interval(ms), flow id.
 
-Under folder `data_legitimate_traces`: 
+Under folder `data_legitimate_traces`: stores attack traces saved with the pattern `trace_m_n`, where m denotes the number of trace, n denotes the subtrace number subtracted from the trace. Each file data contains two columns: timestamp(ms), flow id.
 
 
 - amulation: send/receive pkts and calculate hit ratio
