@@ -18,7 +18,7 @@ We have plenty of files in this part, details are explained as following:
 Under folder `code`:
 - new_topology.py: The "new_topology" custom starts all of the mininet components and the network. It is a 18-host network with one attack host, one active legitimate host, and 16 passive legitimate hosts only receiving packets, all connected through an Open vSwtich under the control of an OpenFlow-Test Controller.
 - folder `calculate_hit_ratio`: 
-  - calculate_hit_ratio.m: function to calculate the hit ratio of legitimate users under mice/medium/elephant flow attack by the given logs(response time of each packets).
+  - calculate_hit_ratio.m: function to calculate the hit ratio of legitimate users under mice/medium/elephant flow attack by the given logs(response time of each packets), the commented part are the code to generate fig.12 in our journal paper.
   - hybrid_calculate_hit_ratio.m: function to calculate the hit ratio of legitimate users under hybrid attack by the given logs(response time of each packets).
   - hybrid_plot_mininet_data.m: plot (c) of   Figure Experiment results on DoS attack in Mininet with total attack rate1000(unit: packets per 100 ms) (solid: experiment; dashed: simulation) in our [paper](https://nsrg.cse.psu.edu/files/2020/12/Tian21INFOCOM-Attack-Resilience-of-Cache-Policies.pdf).
   - plot_mininet_data.m: plot (a-b) of   Figure Experiment results on DoS attack in Mininet with total attack rate1000(unit: packets per 100 ms) (solid: experiment; dashed: simulation) in our [paper](https://nsrg.cse.psu.edu/files/2020/12/Tian21INFOCOM-Attack-Resilience-of-Cache-Policies.pdf).
