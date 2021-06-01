@@ -57,7 +57,7 @@ Then, please go to [the Configurable Rule Replacement Policies in SDN: Implement
 sudo apt-get install git
 git config --global user.name "user_name"
 git config --global user.email "email_id"
-git clone https://github.com/SophieCXT/Attack-Resilience-of-Cache-Replacement-Policies-Code-and-Data-for-Experiments-in-Mininet-
+git clone https://github.com/SophieCXT/Attack-Resilience-of-Cache-Replacement-Policies-Code-and-Data-for-Experiments-in-Mininet-.git
 ```
 
 - set insertion delay and idle timeout
