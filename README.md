@@ -176,6 +176,26 @@ mininet> sh ovs-ofctl -O OpenFlow14 mod-eviction-policy s1 LRU
 Friendly method/references:
 Trick: to enlarge the font size in xterm windows, you can press ctrl and right mouth then you can choose the font size. I chose 'large'.
 
+If you encountered the situation below when you want to start mininet environment with our own customized topology:
+```
+tbx5027@tbx5027-virtual-machine:packet_generation$ sudo python new_topology.py
+ovs-vsctl: unix:/usr/var/run/openvswitch/db.sock: database connection failed (No such file or directory)
+ovs-vsctl exited with code 1
+*** Error connecting to ovs-db with ovs-vsctl
+Make sure that Open vSwitch is installed, that ovsdb-server is running, and that
+"ovs-vsctl show" works correctly.
+You may wish to try "service openvswitch-switch start".
+```
+You can use the following commands to solve the problem.
+```
+tbx5027@tbx5027-virtual-machine:packet_generation$ sudo depmod -a
+tbx5027@tbx5027-virtual-machine:packet_generation$
+tbx5027@tbx5027-virtual-machine:packet_generation$ sudo /etc/init.d/openvswitch-switch start
+tbx5027@tbx5027-virtual-machine:packet_generation$
+tbx5027@tbx5027-virtual-machine:packet_generation$ sudo /etc/init.d/openvswitch-switch restart
+tbx5027@tbx5027-virtual-machine:packet_generation$ sudo /usr/share/openvswitch/scripts/ovs-ctl start
+```
+
 For running via screen:
 >https://linuxize.com/post/how-to-use-linux-screen/     
 
