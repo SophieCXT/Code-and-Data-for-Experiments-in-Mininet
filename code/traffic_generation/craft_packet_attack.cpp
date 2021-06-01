@@ -475,8 +475,8 @@ void profile_time() {
 void run() {
     char s_addr[32] = "10.0.0.17";
     char d_addr[32] = "10.0.0.2";
-    uint32_t user_max_flows = 1000000;
-    double lambda_a = 1;
+    uint32_t user_max_flows = 1000; //1000000 mice; 1000 elephant
+    double lambda_a = 1; //0.001 mice; 1 elephant
     char ATTACK_TRACE_FILE[64];
 
     srand(time(NULL));
