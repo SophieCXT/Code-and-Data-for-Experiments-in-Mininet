@@ -486,7 +486,7 @@ void run() {
     if (CONSTANT_TRAFFIC) {
         sprintf(ATTACK_TRACE_FILE, "Subtraces/contant_attack_trace_%f", lambda_a);
     } else {
-        sprintf(ATTACK_TRACE_FILE, "Subtraces/attack_trace_%f", lambda_a);
+        sprintf(ATTACK_TRACE_FILE, "Subtraces/attack_trace_%f", lambda_a); //Subtraces/mice_attack_trace_9_1
     }
     std::cout<<"\n"<<ATTACK_TRACE_FILE<<std::endl;
     craft_packets(UDP, s_addr, d_addr, user_max_flows, MAX_SEQ);
