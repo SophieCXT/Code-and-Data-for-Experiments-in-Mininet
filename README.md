@@ -174,6 +174,7 @@ mininet> sh ovs-ofctl -O OpenFlow14 mod-eviction-policy s1 LRU
 
 
 Friendly method/references:
+Trick: to enlarge the font size in xterm windows, you can press ctrl and right mouth then you can choose the font size. I chose 'large'.
 
 For running via screen:
 >https://linuxize.com/post/how-to-use-linux-screen/     
