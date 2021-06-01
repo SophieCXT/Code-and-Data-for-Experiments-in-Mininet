@@ -16,6 +16,16 @@ function [elephant, mice] = calculate_hit_ratio(strategy)
     % legend('Delay of sure hits','Delay of sure misses')
     % hold off
 
+    [h_x, h_y] = empirical_cdf(data_hits);
+    [m_x, m_y] = empirical_cdf(data_misses);
+    figure(1)
+    plot(h_x, h_y, 'LineWidth', 1.5, 'DisplayName','Delay of sure hits'), xlabel('delay (ms)'), ylabel('CDF')
+    set(gca,'XTick',(0:0.1:30))
+    hold on
+    plot(m_x, m_y, 'LineWidth', 1.5, 'DisplayName','Delay of sure misses')
+    legend('Delay of sure hits','Delay of sure misses')
+    hold off
+
     elephant = [];
     for i = 1:9
        filename = "randomization_logs/" + strategy + "/elephant/log_" + i + "_1.txt";
