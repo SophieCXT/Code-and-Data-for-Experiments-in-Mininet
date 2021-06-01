@@ -32,7 +32,7 @@ Under folder `code`:
   - craft_packet_attack.cpp: generate attack trace file or send the packets according to a given attack trace file.
   - trace_driven_traffic.cpp: generate the legitimate traffic according to the trace txt file in folder `data_legitimate_traces`. (under same timestamp and flow id)
   
-Under folder `data_attack_traces`: stores attack traces saved with the pattern `attack_trace_n`, where n denotes the flow rate of the trace. Each file data contains two columns: time interval(ms), flow id.
+Under folder `data_attack_traces`: stores attack traces saved with the pattern `attack_trace_n`, where n denotes the flow rate of the trace. Each file data contains two columns: **interarrival time**(ms, time interval between consecutive packets), **flow id**.
 
 Under folder `data_legitimate_traces`: stores attack traces saved with the pattern `trace_m_n`, where m denotes the number of trace, n denotes the subtrace number subtracted from the trace. Each file data contains two columns: timestamp(ms), flow id.
 
