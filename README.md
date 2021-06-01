@@ -37,12 +37,6 @@ Under folder `data_attack_traces`: stores attack traces saved with the pattern `
 Under folder `data_legitimate_traces`: stores attack traces saved with the pattern `trace_m_n`, where m denotes the number of trace, n denotes the subtrace number subtracted from the trace. Each file data contains two columns: timestamp(ms), flow id.
 
 
-- amulation: send/receive pkts and calculate hit ratio
->https://github.com/namitha-nambiar/attack-resilience-scripts-nnambiar/blob/master/UDP_TRAFFIC/2.0-UDP_TRAFFIC/
-
-
-
-
 ### Environment Set Up
 - Ubuntu 16.04.07 VM
 > https://www.linuxvmimages.com/images/ubuntu-1604/ 
