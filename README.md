@@ -31,8 +31,9 @@ Under folder `code`:
   - craft_packet.h: headfile of crafting packets.
   - craft_packet_attack.cpp: generate attack trace file or send the packets according to a given attack trace file.
   - trace_driven_traffic.cpp: generate the legitimate traffic according to the trace txt file in folder `data_legitimate_traces`. (under same timestamp and flow id)
+  - folder `binary_execution_file`: stores the binary files that you can easily execute. The attack traffice generation files are named as `<attack strategy>_m_n`, where `<attack strategy>` denotes whether it is mice flow attack or elephant flow attack, m denotes the number of trace, n denotes the subtrace number subtracted from the trace. E.g., elephant_1_1 is trace_1_1's corresponding elephant flow attack trace. 
   
-Under folder `data_attack_traces`: stores attack traces saved with the pattern `attack_trace_n`, where n denotes the flow rate of the trace. Each file data contains two columns: **interarrival time**(ms, time interval between consecutive packets), **flow id**.
+Under folder `data_attack_traces`: stores attack traces saved with the pattern `<attack strategy>_m_n`, where n denotes the flow rate of the trace. Each file data contains two columns: **interarrival time**(ms, time interval between consecutive packets), **flow id**.
 
 Under folder `data_legitimate_traces`: stores attack traces saved with the pattern `trace_m_n`, where m denotes the number of trace, n denotes the subtrace number subtracted from the trace. Each file data contains two columns: timestamp(ms), flow id.
 
