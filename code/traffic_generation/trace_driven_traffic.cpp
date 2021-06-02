@@ -157,7 +157,7 @@ void send_packets() {
             totaltimeslept += it->first;
     }
     
-    printf("\nSlept for a total of %f sec", totaltimeslept);
+    printf("\nSlept for a total of %f sec", totaltimeslept*0.1);
     // close this handle for the flooder
     pcap_close(flooder_handle); 
 }
