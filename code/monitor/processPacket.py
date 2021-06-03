@@ -54,7 +54,7 @@ def calculateResponseTime(pkt_sent, pkt_recv):
     pkt_rtt[port] = resp_time
 
   formatted_rtt = []
-  print('Response time (ms) for packets sorted by port numbers:\n')
+  # print('Response time (ms) for packets sorted by port numbers:\n')
   for port in sorted(pkt_rtt.keys()):
     #print('Flow #{}: {}'.format(port, pkt_rtt[port]))
     for seq in pkt_rtt[port]:
