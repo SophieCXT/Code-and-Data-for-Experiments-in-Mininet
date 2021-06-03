@@ -51,7 +51,7 @@ sudo mn
 mininet> exit
 
 ```
-Then, please go to [the Configurable Rule Replacement Policies in SDN: Implementation in Open vSwitch](https://github.com/SophieCXT/Configurable-Rule-Replacement-Policies-in-SDN-Implementation-in-Open-vSwitch) for the installation of openvswitch-2.14.0 with the flow table cache replacement policies we implemented.
+Then, please go to [the Configurable Rule Replacement Policies in SDN: Implementation in Open vSwitch](https://github.com/SophieCXT/SDN-Implementation-in-Open-vSwitch) for the installation of openvswitch-2.14.0 with the flow table cache replacement policies we implemented.
 
 - clone repository
 ```
