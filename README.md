@@ -133,7 +133,7 @@ Exiting...
 Check file "receiver.pcap" for results
 
 ```
-- h18:  generate attack traffic, run` ./trace_driven_traffic `.
+- h18:  generate background traffic, run` ./trace_driven_traffic `. Make sure the subtraces text files are under the same folder of execution binary file.
  ```
 # ./trace_driven_traffic 
 Enter Name of Trace File :trace_2_1.txt
